@@ -1,9 +1,13 @@
 <div id="form" class="center">
+
 <?php 
+    
 if (isset($_SESSION['userexist'])) {
     echo "<h1>".$_SESSION['userexist']."</h1>";
     unset($_SESSION['userexist']);
-} else { ?>
+} else { 
+    
+?>
 
     <form action="createuseraction.php" method="post">
         <div class="left col2">
@@ -32,8 +36,11 @@ if (isset($_SESSION['userexist'])) {
         </div>
         <button class="loginbutton clear">OPRET</button>
     </form>
+
 <?php
-}
-?>
-</div>
     
+}
+    
+?>
+
+</div>

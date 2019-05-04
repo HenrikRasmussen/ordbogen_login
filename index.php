@@ -1,6 +1,8 @@
-<?php 
+<?php
+
 session_start(); // Starter sessions
-include('top.php'); // DOCTYPE -> bodytag
+require_once('top.php'); // DOCTYPE -> bodytag
+
 ?>
 <div id="main">
     <nav>
@@ -8,20 +10,24 @@ include('top.php'); // DOCTYPE -> bodytag
            <a href="?button=login"><button class="left">LOGIN</button></a>
            <a href="?button=create"><button class="right">OPRET BRUGER</button></a>
         </div>
-    <nav>
+    </nav>
 
     <?php
     
-    if(isset($_GET['button'])){
-        if($_GET['button'] == 'login'){ 
-            include('login.php');
-        }else if($_GET['button'] == 'create'){
-            include('createuser.php');
+    if (isset($_GET['button'])) {
+        if ($_GET['button'] == 'login') { 
+            require_once('login.php');
+        } elseif ($_GET['button'] == 'create') {
+            require_once('createuser.php');
         }
     }
+        
     ?>
 
 </div>
+
 <?php
-include('bottom.php'); // /bodytag og /html
+        
+require_once('bottom.php'); // /bodytag og /html
+        
 ?>

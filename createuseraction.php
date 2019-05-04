@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 $_SESSION['name'] = addslashes($_POST['name']);
@@ -8,10 +9,9 @@ $_SESSION['city'] = addslashes($_POST['city']);
 $_SESSION['email'] = addslashes($_POST['email']);
 $_SESSION['password'] = addslashes($_POST['password']);
 
-print_r($_POST);
-include('db.php');
+require_once('db.php');
 
-if(!$con){
+if (!$con) {
     echo 'no connection '.mysqli_connect_error();
 }
 
@@ -38,4 +38,5 @@ if ($num == 1) {
         $result = mysqli_query($con, $sql);
         header('LOCATION: index.php?button=login');
     }
-    
+  
+// EOF
