@@ -1,0 +1,125 @@
+:root{
+    --prim-color: #0fa389; 
+    --rim: 5px solid #777;
+    --prim-font-color: #415459;
+}
+
+*:focus {
+    outline: 0;
+}
+    
+body{
+    color: var(--prim-font-color);
+    background-color: #eef1f7;
+}
+
+header{
+    height: 20vh;
+    background-color: var(--prim-color);
+    border-bottom: var(--rim);
+}
+
+nav{
+    width: 850px;
+    margin: 0 auto;
+}
+
+#main{
+    padding-top: 30px;
+    height: 420px;
+}
+
+#bottom{
+    background-color: var(--prim-color);
+    height: calc(100vh - 420px - 20vh);
+    border-top: var(--rim);
+}
+
+#form{
+    height: 400px;
+    font-size: 1.5em;
+    position:relative;
+    width: 800px;
+    
+}
+
+label{
+    width: calc(100% - 15px);
+    margin-bottom: 5px;
+    padding-left: 15px;
+    font-weight: bold;
+    display: block;
+}
+
+input{
+    display: block;
+    width: calc(100% - 20px);
+    font-size: 1em;
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 10px;
+    border: 2px solid #aaa;
+    border-radius: 25px;    
+} 
+
+.center{
+    margin: 0 auto;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+    
+}
+
+.clear{
+    clear: both;
+}
+
+.col2{
+    width: 48%;
+    height: 75px;
+}
+
+button{
+    color: #eef1f7;
+    width: calc(50% - 20px);
+    font-size: 20px;        
+    background-color: var(--prim-color);
+    padding: 5px;
+    border-radius: 25px;
+    border: 2px solid var(--prim-color);
+}
+button:hover{
+    color: var(--prim-font-color);
+    background-color: #eef1f7;
+    border: 2px solid #bbb;
+}
+
+.loginbutton{
+    width: 101%;
+    margin: 20px auto;
+}
+#logoutbutton{
+    width: 100%;
+    margin: 20px auto;
+}
+
+#logincreate{
+    height: 50px;
+    width: 600px;
+}
+h1{
+    font-size: 4em;
+    text-align: center;
+}
+#secret{
+    width: 600px;
+}
+
+.row{
+    width: 100%;
+    background-color: red;
+}
