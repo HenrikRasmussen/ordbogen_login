@@ -7,8 +7,9 @@
 *:focus {
     outline: 0;
 }
-    
+
 body{
+    font-family: 'Open Sans',sans-serif;
     color: var(--prim-font-color);
     background-color: #eef1f7;
 }
@@ -113,6 +114,10 @@ button:hover{
 }
 h1{
     font-size: 4em;
+    text-align: center;
+}
+h2{
+    font-size: 2em;
     text-align: center;
 }
 #secret{

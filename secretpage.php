@@ -9,11 +9,18 @@ if (!$_SESSION['loggedin']) {
 }
 require_once('top.php'); // DOCTYPE -> bodytag
 
+require_once('db.php');
+
+$sql = 'SELECT * FROM users WHERE email = "'.$_SESSION['email'].'"';
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_array($result);
+
 ?>
 
 <div id="main">
     <div id="secret" class="center">
-        <h1 class="center"><?= 'Velkommen til siden'; ?></h1>
+        <h1 class="center">Velkommen</h1>
+        <h2 class="center"><?php echo $row['name']; ?></h2>
         <div class="center">
             <a href="logout.php"><button id="logoutbutton" >LOG UD</button></a>
         </div>
