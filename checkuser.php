@@ -18,7 +18,7 @@ $row = mysqli_fetch_array($result);
 $num = mysqli_num_rows($result);
 
 
-if (($num == 1) && ($row['password'] == $_SESSION['password'])) {
+if (($num == 1) && ($row['password'] == md5($_SESSION['password']))) {
     $_SESSION['loggedin'] = true;
     header('LOCATION: secretpage.php');
 } else {

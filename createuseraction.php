@@ -32,7 +32,7 @@ if ($num == 1) {
         '".$_SESSION['postalcode']."',
         '".$_SESSION['city']."',
         '".$_SESSION['email']."',
-        '".$_SESSION['password']."'
+        '".md5($_SESSION['password'])."'
         )";
 
         $result = mysqli_query($con, $sql);
